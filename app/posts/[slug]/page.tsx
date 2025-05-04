@@ -1,5 +1,4 @@
 import React, { Key } from "react";
-import { fetchHeaders } from "../../../helpers/fetchHeaders";
 import { Container, Heading, Link, Text } from "@yamada-ui/react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -21,13 +20,10 @@ export default async function PostPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { host, protocol } = await fetchHeaders();
-
+  const baseURL = process.env.NEXT_PUBLIC_SITE_URL;
   const { slug } = await params;
 
-  const response = await fetch(
-    `${protocol}://${host}/api/posts/slug?slug=${slug}`
-  );
+  const response = await fetch(`${baseURL}/api/posts/slug?slug=${slug}`);
 
   const post = await response.json();
 
@@ -39,9 +35,7 @@ export default async function PostPage({
     return <div>Post not found</div>;
   }
 
-  const res = await fetch(
-    `${protocol}://${host}/api/posts/pageId?pageId=${post.id}`
-  );
+  const res = await fetch(`${baseURL}/api/posts/pageId?pageId=${post.id}`);
 
   const blocks = await res.json();
 

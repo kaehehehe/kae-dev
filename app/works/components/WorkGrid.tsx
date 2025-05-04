@@ -1,6 +1,5 @@
 import { Container, Flex, Grid, GridItem, Link, Text } from "@yamada-ui/react";
 import styles from "../styles.module.css";
-import { fetchHeaders } from "../../../helpers/fetchHeaders";
 
 type Work = {
   title: string;
@@ -11,9 +10,8 @@ type Work = {
 };
 
 export async function WorkGrid() {
-  const { host, protocol } = await fetchHeaders();
-
-  const response = await fetch(`${protocol}://${host}/api/works`);
+  const baseURL = process.env.NEXT_PUBLIC_SITE_URL;
+  const response = await fetch(`${baseURL}/api/works`);
   const workList: Work[] = await response.json();
 
   return (

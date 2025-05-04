@@ -39,7 +39,7 @@ export const getTagColor = (name: Category) => {
   }
 };
 
-export function PostsList({ posts, locale }: { posts: any[]; locale: string }) {
+export function PostsList({ posts }: { posts: any[] }) {
   const [selectedCategory, setSelectedCategory] = useState<Category>("All");
 
   const selectCategory = (category: Category) => {
@@ -59,7 +59,7 @@ export function PostsList({ posts, locale }: { posts: any[]; locale: string }) {
     <>
       <CategoryButtons selectCategory={selectCategory} />
       <Separator />
-      <FilteredPosts filteredPosts={filteredPosts} locale={locale} />
+      <FilteredPosts filteredPosts={filteredPosts} />
     </>
   );
 }

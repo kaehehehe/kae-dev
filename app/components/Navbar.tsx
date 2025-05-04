@@ -1,11 +1,9 @@
 import { Flex, Text } from "@yamada-ui/react";
 import React from "react";
 import Link from "next/link";
-import { Locale } from "../../../i18n/routing";
-import { LocaleMenuButton } from "./LocaleMenuButton";
 import { GithubIconButton } from "./GIthubIconButton";
 
-export function Navbar({ locale }: { locale: Locale }) {
+export function Navbar() {
   return (
     <nav>
       <Flex
@@ -16,20 +14,19 @@ export function Navbar({ locale }: { locale: Locale }) {
         margin="20px auto 0"
       >
         <Flex justifyContent="space-around" width={180}>
-          <Link href={`/${locale}/`} passHref>
+          <Link href="/" passHref>
             <Text>Home</Text>
           </Link>
-          <Link href={`/${locale}/works`} passHref>
+          <Link href="/works" passHref>
             <Text>Works</Text>
           </Link>
-          <Link href={`/${locale}/posts`}>
+          <Link href="/posts">
             <Text>Posts</Text>
           </Link>
         </Flex>
 
         <Flex justifyContent="space-between" width={90}>
           <GithubIconButton />
-          <LocaleMenuButton />
         </Flex>
       </Flex>
     </nav>

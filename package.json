@@ -17,7 +17,6 @@
     "@yamada-ui/lucide": "^1.10.2",
     "@yamada-ui/react": "^1.7.3",
     "next": "15.1.4",
-    "next-intl": "^3.26.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-syntax-highlighter": "^15.6.1"

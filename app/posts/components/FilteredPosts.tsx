@@ -3,13 +3,9 @@ import { Flex, Heading, Tag, Text, Wrap } from "@yamada-ui/react";
 import styles from "../styles.module.css";
 import { Category, getTagColor } from "./PostsList";
 
-export function FilteredPosts({
-  filteredPosts,
-  locale,
-}: {
-  filteredPosts: any[];
-  locale: string;
-}) {
+export function FilteredPosts({ filteredPosts }: { filteredPosts: any[] }) {
+  const baseURL = process.env.NEXT_PUBLIC_SITE_URL;
+
   return (
     <>
       {filteredPosts.map((post: any) => {
@@ -20,7 +16,7 @@ export function FilteredPosts({
         return (
           <Link
             key={post.id}
-            href={`/${locale}/posts/${slug.rich_text[0]?.plain_text}`}
+            href={`${baseURL}/posts/${slug.rich_text[0]?.plain_text}`}
           >
             <article className={styles.post}>
               <Flex direction="column">
