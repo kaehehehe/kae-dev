@@ -4,7 +4,6 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Image from "next/image";
 import styles from "./styles.module.css";
-import Giscus from "./components/Giscus";
 
 type AnnotationsType = {
   bold: boolean;
@@ -191,7 +190,7 @@ export default async function PostPage({
         {created.date.start}
       </Text>
       <span>{blocks.map(renderBlock)}</span>
-      <Giscus />
+      {/* <Giscus /> */}
     </Container>
   );
 }
