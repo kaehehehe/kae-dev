@@ -1,4 +1,7 @@
+"use server";
+
 import { Container, Flex, Grid, GridItem, Link, Text } from "@yamada-ui/react";
+
 import styles from "../styles.module.css";
 
 type Work = {

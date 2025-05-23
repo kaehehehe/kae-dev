@@ -1,7 +1,9 @@
-import Link from "next/link";
 import { Flex, Heading, Tag, Text, Wrap } from "@yamada-ui/react";
+import Link from "next/link";
+
 import styles from "../styles.module.css";
-import { Category, getTagColor } from "./PostsList";
+import { Category } from "./PostsList";
+import { getTagColor } from "../helpers/getTagColor";
 
 export function FilteredPosts({ filteredPosts }: { filteredPosts: any[] }) {
   const baseURL = process.env.NEXT_PUBLIC_SITE_URL;

@@ -1,5 +1,6 @@
-import { NextResponse } from "next/server";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { NextResponse } from "next/server";
+
 import { notion } from "../../../lib/notion";
 
 export async function GET(request: Request) {
@@ -16,14 +17,14 @@ export async function GET(request: Request) {
     } else {
       return NextResponse.json(
         { error: "Invalid request. Provide a pageId." },
-        { status: 400 }
+        { status: 400 },
       );
     }
   } catch (error) {
     console.error("Error fetching data:", error);
     return NextResponse.json(
       { error: "Failed to fetch data" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

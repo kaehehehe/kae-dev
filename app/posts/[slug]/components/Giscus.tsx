@@ -26,7 +26,7 @@ export default function Giscus() {
     scriptElem.setAttribute("data-lang", "ko");
 
     ref.current.appendChild(scriptElem);
-  }, [ref.current]);
+  }, []);
 
   if (typeof window === "undefined") {
     return null;

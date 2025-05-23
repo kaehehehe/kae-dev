@@ -1,5 +1,4 @@
-import { Flex, Heading, Wrap } from "@yamada-ui/react";
-import { Container } from "@yamada-ui/react";
+import { Flex, Heading, Wrap, Container } from "@yamada-ui/react";
 import Image from "next/image";
 
 export default function HomePage() {

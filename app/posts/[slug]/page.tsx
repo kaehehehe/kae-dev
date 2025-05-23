@@ -1,8 +1,10 @@
 import React, { Key } from "react";
+
 import { Container, Heading, Link, Text } from "@yamada-ui/react";
+import Image from "next/image";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import Image from "next/image";
+
 import styles from "./styles.module.css";
 
 type AnnotationsType = {
@@ -111,7 +113,7 @@ export default async function PostPage({
                   plain_text: string;
                   annotations: AnnotationsType;
                 },
-                idx: Key
+                idx: Key,
               ) => {
                 const { code, bold } = annotations;
 
@@ -133,7 +135,7 @@ export default async function PostPage({
                     {plain_text}
                   </span>
                 );
-              }
+              },
             )}
           </Text>
         );

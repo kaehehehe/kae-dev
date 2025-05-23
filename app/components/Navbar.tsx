@@ -1,6 +1,8 @@
-import { Flex, Text } from "@yamada-ui/react";
 import React from "react";
+
+import { Flex, Text } from "@yamada-ui/react";
 import Link from "next/link";
+
 import { GithubIconButton } from "./GIthubIconButton";
 
 export function Navbar() {

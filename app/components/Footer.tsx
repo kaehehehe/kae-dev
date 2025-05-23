@@ -1,5 +1,6 @@
-import { Flex, Text } from "@yamada-ui/react";
 import React from "react";
+
+import { Flex, Text } from "@yamada-ui/react";
 
 export function Footer() {
   return (
