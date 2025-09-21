@@ -1,0 +1,30 @@
+.container {
+  min-height: 90vh;
+  height: fit-content;
+  max-width: 900px;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 6px;
+}
+
+.emoji {
+  margin-right: 5px;
+}
+
+.description {
+  margin-bottom: 4px;
+}
+
+.post {
+  min-height: 40px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.post:hover {
+  opacity: 0.7;
+  transition: ease-in all 300ms;
+}

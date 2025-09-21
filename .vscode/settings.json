@@ -1,0 +1,41 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.useFlatConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "eslint.format.enable": false,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#c9fde4",
+    "activityBar.background": "#c9fde4",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#c284fa",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#c9fde4",
+    "statusBar.background": "#98fbcb",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#67f9b2",
+    "statusBarItem.remoteBackground": "#98fbcb",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#98fbcb",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#98fbcb99",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#98FBCB"
+}
